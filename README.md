@@ -27,11 +27,14 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] .gitignore
 
 [x] html basic layout
-[] link html with JQ, client.js, CSS
-[] install npm
-[] install npm express
-[] install body-parser
-[] install npm pg
+[x] link html w/ JQ, client.js, CSS
+[x] npm init --yes
+[x] npm install
+[x] npm install express
+[x] npm install -body-parser
+[x] npm install pg
+
+[x] package.json "start": "node server/server.js"
 
 
 ### Interface
