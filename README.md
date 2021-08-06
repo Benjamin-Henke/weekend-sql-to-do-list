@@ -9,33 +9,40 @@ Your project description goes here. What problem did you solve? How did you solv
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 
-### Setup
-[] server folder
-    [] modules folder
-        [] pool.js
-    [] public folder
-        [] html
-        [] scripts folder
-            [] client.js
-        [] vendors folder
-            [] JQ
-    [] routes folder
-        [] todo.router.js
-    [] styles folder
-        [] CSS
-[] .gitignore
-[] link html with JQ, client.js, CSS
+### Setup - git branch feature/setup
+[x] server folder
+    [x] modules folder
+        [x] pool.js
+    [x] public folder
+        [x] html
+        [x] scripts folder
+            [x] client.js
+        [x] vendors folder
+            [x] JQ
+        [x] styles
+            [x] CSS
+    [x] routes folder
+        [x] todo.router.js
+    [x] server.js
+[x] .gitignore
 
-[] install npm
-[] install npm express
-[] install body-parser
-[] install npm pg
+[x] html basic layout
+[x] link html w/ JQ, client.js, CSS
+[x] npm init --yes
+[x] npm install
+[x] npm install express
+[x] npm install -body-parser
+[x] npm install pg
+
+[x] package.json "start": "node server/server.js"
+
+[x] link files together
 
 
-### Interface
+### Interface - git branch feature/interface
 
 
-### Database
+### Database - git branch feature/database
 
 
 ### Client
