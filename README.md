@@ -10,22 +10,24 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 
 ### Setup
-[] server folder
-    [] modules folder
-        [] pool.js
-    [] public folder
-        [] html
-        [] scripts folder
-            [] client.js
-        [] vendors folder
-            [] JQ
-    [] routes folder
-        [] todo.router.js
-    [] styles folder
-        [] CSS
-[] .gitignore
-[] link html with JQ, client.js, CSS
+[x] server folder
+    [x] modules folder
+        [x] pool.js
+    [x] public folder
+        [x] html
+        [x] scripts folder
+            [x] client.js
+        [x] vendors folder
+            [x] JQ
+    [x] routes folder
+        [x] todo.router.js
+    [x] styles folder
+        [x] CSS
+    [x] server.js
+[x] .gitignore
 
+[] html basic layout
+[] link html with JQ, client.js, CSS
 [] install npm
 [] install npm express
 [] install body-parser
