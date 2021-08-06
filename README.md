@@ -36,8 +36,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 [x] package.json "start": "node server/server.js"
 
-[] link files together
-    [] 
+[x] link files together
 
 
 ### Interface - git branch feature/interface
