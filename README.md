@@ -9,7 +9,7 @@ Your project description goes here. What problem did you solve? How did you solv
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 
-### Setup
+### Setup - git branch feature/setup
 [x] server folder
     [x] modules folder
         [x] pool.js
@@ -36,11 +36,14 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 [x] package.json "start": "node server/server.js"
 
+[] link files together
+    [] 
 
-### Interface
+
+### Interface - git branch feature/interface
 
 
-### Database
+### Database - git branch feature/database
 
 
 ### Client
