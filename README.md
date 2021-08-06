@@ -19,14 +19,14 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
             [x] client.js
         [x] vendors folder
             [x] JQ
+        [x] styles
+            [x] CSS
     [x] routes folder
         [x] todo.router.js
-    [x] styles folder
-        [x] CSS
     [x] server.js
 [x] .gitignore
 
-[] html basic layout
+[x] html basic layout
 [] link html with JQ, client.js, CSS
 [] install npm
 [] install npm express
