@@ -34,7 +34,7 @@ function getTasks() {
     })
 } // end getTasks
 
-function postTasks(newTask) {
+function postTask(newTask) {
     console.log('postTasks');
     $.ajax({
         method: 'POST',
