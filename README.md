@@ -41,10 +41,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 
 ### Interface - git branch feature/interface
-[x] Create *Task* input fields
-[x] Create *Add Task* btn
-[x] Create table with current tasks
-    [] Tasks should have *Complete* and *Delete* btn when appended
+[x] create *Task* input fields
+[x] create *Add Task* btn
+[x] create table with current tasks
+    [] tasks should have *Complete* and *Delete* btn when appended
 
 ### Database - git branch feature/db
 [x] create sql file
@@ -54,7 +54,16 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] copy sql code in database.sql
 [x] link db
 
-### Client
+### Client - git branch feature/client
+[] *Add Task* btn click handler
+    [] grabs user inputs 
+[] GET
+[] POST
+[] PUT
+[] DELETE
 
-
-### Server/Router
+### Router - git branch feature/router
+[] GET
+[] POST
+[] PUT
+[] DELETE

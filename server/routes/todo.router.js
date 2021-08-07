@@ -5,7 +5,7 @@ const { builtinModules } = require('module');
 const toDoRouter = express.Router();
 
 // DB connection
-const pool = require('../modules/tasks');
+const pool = require('../modules/pool');
 
 
 
