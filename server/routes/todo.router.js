@@ -43,7 +43,11 @@ toDoRouter.post('/', (req, res)=> {
 
 
 
-
+toDoRouter.delete('/:id', (req, res)=> {
+    let taskId = req.params.id;
+    console.log('Task to delete id', taskId);
+    
+})
 
 // Export to server
 module.exports = toDoRouter;

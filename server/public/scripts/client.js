@@ -58,8 +58,7 @@ function deleteTask() {
     
     $.ajax({
         method: 'DELETE',
-        url: '/todo',
-        data: taskId
+        url: `/todo/${taskId}`,
     }).then((response)=> {
         console.log(response);
         // Get updated database
