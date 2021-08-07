@@ -59,12 +59,12 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] grabs user inputs 
 [x] GET - feature/GET
     [x] render tasks to DOM
-[] POST - feature/POST
+[x] POST - feature/POST
 [] PUT - feature/PUT
 [] DELETE - feature/DELETE
 
 ### Router
 [x] GET - feature/GET
-[] POST - feature/POSt
+[x] POST - feature/POSt
 [] PUT - feature/PUT
 [] DELETE - feature/DELETE

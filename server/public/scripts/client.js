@@ -15,7 +15,7 @@ function clickHandlers() {
         $('#taskIn').val('').focus();
         console.log(taskToSend);
         // Function below will send user input for POST
-            // saveTask(taskToSend)
+        postTask(taskToSend)
     }); // end #addTaskBtn function
 } // end clickHandlers
 
@@ -23,7 +23,6 @@ function clickHandlers() {
 // Make request to server
 function getTasks() {
     console.log('getTasks');
-
     $.ajax({
         method: "GET",
         url: "/todo"
@@ -35,6 +34,19 @@ function getTasks() {
     })
 } // end getTasks
 
+function postTask(newTask) {
+    console.log('postTasks');
+    $.ajax({
+        method: 'POST',
+        url: '/todo',
+        data: newTask
+    }).then((response)=> {
+        console.log(response);
+        getTasks();
+    }).catch((error)=> {
+        console.log('POST Error', error);
+    })
+} // end postTasks
 
 // Renders tasks to the DOM
 function renderTasks(response) {
