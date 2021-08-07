@@ -9,9 +9,9 @@ const pool = require('../modules/pool');
 
 // Receive GET request from client
 // Grab data from database
-router.get('/', (req, res) => {
+toDoRouter.get('/', (req, res) => {
     let sqlQuery = `
-        SELECT "id", "task", "completed" * FROM "tasks" ORDER BY "id";
+        SELECT "id", "task", "completed" FROM "tasks" ORDER BY "id";
     `;
     pool.query(sqlQuery).then((response)=> {
         // Sends back data from database

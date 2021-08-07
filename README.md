@@ -58,12 +58,13 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] *Add Task* btn click handler
     [x] grabs user inputs 
 [x] GET - feature/GET
+    [] render tasks to DOM
 [] POST - feature/POST
 [] PUT - feature/PUT
 [] DELETE - feature/DELETE
 
 ### Router
-[] GET - feature/GET
+[x] GET - feature/GET
 [] POST - feature/POSt
 [] PUT - feature/PUT
 [] DELETE - feature/DELETE
