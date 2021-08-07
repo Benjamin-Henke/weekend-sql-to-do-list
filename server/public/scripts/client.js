@@ -24,7 +24,6 @@ function clickHandlers() {
 } // end clickHandlers
 
 
-// Make request to server
 function getTasks() {
     console.log('getTasks');
     $.ajax({
@@ -54,8 +53,20 @@ function postTask(newTask) {
 
 
 function deleteTask() {
-    console.log('deleteTask', $(this));
+    let taskId = $(this).parents('tr').data('id')
+    console.log('deleteTask', 'id', taskId, $(this));
     
+    $.ajax({
+        method: 'DELETE',
+        url: '/todo',
+        data: taskId
+    }).then((response)=> {
+        console.log(response);
+        // Get updated database
+        getTasks();
+    }).catch((error)=> {
+        console.log('DELETE Error', error);
+    })
 } // end deleteTask
 
 // Renders tasks to the DOM
@@ -68,7 +79,7 @@ function renderTasks(response) {
     // Loop through response
     for (const task of response) {
         renderElement.append(`
-            <tr date-id=${response.id}>
+            <tr data-id=${task.id}>
                 <td> ${task.task} </td>
                 <td> ${task.completed} </td>
                 <td class="completeBtn"><button>Complete</button></td>
