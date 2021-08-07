@@ -32,6 +32,7 @@ toDoRouter.post('/', (req, res)=> {
         newTask.task,   // $1
     ];
     console.log('Params:', sqlParams);
+    // Send new data to the database
     pool.query(sqlQuery, sqlParams).then((dbRes)=> {
         res.sendStatus(201); // Created
     }).catch((error)=> {

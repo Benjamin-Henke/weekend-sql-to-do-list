@@ -65,6 +65,6 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ### Router
 [x] GET - feature/GET
-[] POST - feature/POSt
+[x] POST - feature/POSt
 [] PUT - feature/PUT
 [] DELETE - feature/DELETE
