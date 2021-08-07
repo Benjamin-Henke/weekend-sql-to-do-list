@@ -14,10 +14,10 @@ function clickHandlers() {
         // Clear input field
         $('#taskIn').val('').focus();
         console.log(taskToSend);
-        readyToSend(taskToSend)
+        // Function below will send user input for POST
+            // saveTask(taskToSend)
     }); // end #addTaskBtn function
 } // end clickHandlers
-
 
 
 // Make request to server
@@ -26,7 +26,7 @@ function getTasks() {
 
     $.ajax({
         method: "GET",
-        url: "/tasks"
+        url: "/todo"
     }).then((response) => {
         console.log(response);
         renderTasks(response);
@@ -37,6 +37,21 @@ function getTasks() {
 
 
 // Renders tasks to the DOM
-function renderTasks() {
+function renderTasks(response) {
     console.log('renderTasks');
+    // Defines our table element where tasks will go
+    // Clear out the old data to prepare for new data
+    let renderElement = $('#viewTask');
+    renderElement.empty();
+    // Loop through response
+    for (const task of response) {
+        renderElement.append(`
+            <tr>
+                <td> ${task.task} </td>
+                <td> ${task.completed} </td>
+                <td id="completeBtn"><button>Complete</button></td>
+                <td id="delBtn"><button>X</button></td>
+            </tr>
+        `); // end append
+    }; // end for loop
 } // end renderTasks

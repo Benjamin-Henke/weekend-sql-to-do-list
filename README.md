@@ -54,16 +54,17 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] copy sql code in database.sql
 [x] link db
 
-### Client - git branch feature/client
+### Client
 [x] *Add Task* btn click handler
     [x] grabs user inputs 
-[x] GET
-[] POST
-[] PUT
-[] DELETE
+[x] GET - feature/GET
+    [x] render tasks to DOM
+[] POST - feature/POST
+[] PUT - feature/PUT
+[] DELETE - feature/DELETE
 
-### Router - git branch feature/router
-[] GET
-[] POST
-[] PUT
-[] DELETE
+### Router
+[x] GET - feature/GET
+[] POST - feature/POSt
+[] PUT - feature/PUT
+[] DELETE - feature/DELETE
