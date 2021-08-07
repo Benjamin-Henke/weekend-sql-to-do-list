@@ -1,5 +1,3 @@
-const { get } = require("../../routes/todo.router");
-
 $(document).ready(() => {
     getTasks();
     clickHandlers();
@@ -100,7 +98,7 @@ function renderTasks(response) {
             <tr data-id=${task.id}>
                 <td> ${task.task} </td>
                 <td> ${task.completed} </td>
-                <td class="completeBtn"><button>Complete</button></td>
+                <td class="completeBtn"><button>&#10003</button></td>
                 <td class="delBtn"><button>X</button></td>
             </tr>
         `); // end append
