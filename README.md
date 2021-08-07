@@ -68,4 +68,5 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] GET - feature/GET
 [x] POST - feature/POSt
 [] PUT - feature/PUT
-[] DELETE - feature/DELETE
+[x] DELETE - feature/DELETE
+    [x] delete item and renders the DOM with correct tasks

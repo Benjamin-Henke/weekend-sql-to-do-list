@@ -22,6 +22,8 @@ toDoRouter.get('/', (req, res)=> {
     })
 }) // end toDoRouter.get
 
+// Receive POST request from client
+// Insert data into database
 toDoRouter.post('/', (req, res)=> {
     let newTask = req.body;
     console.log('New task:', newTask);
@@ -41,13 +43,18 @@ toDoRouter.post('/', (req, res)=> {
     })
 }) // end toDoRouter.post
 
-
-
+// Receive DELETE request from client
+// Delete data from database
 toDoRouter.delete('/:id', (req, res)=> {
-    let taskId = req.params.id;
-    console.log('Task to delete id', taskId);
-    
-})
+    let sqlQuery = `DELETE FROM "tasks" WHERE "id" = $1`;
+    let sqlParams = [req.params.id];  // $1 -> this is the id
+    pool.query(sqlQuery, sqlParams).then((dbRes)=> {
+        res.sendStatus(200); // OK
+    }).catch((error)=> {
+        console.log('DELETE Error', error);
+        res.sendStatus(500); // Send serer error
+    })
+}) // end toDoRouter.delete
 
 // Export to server
 module.exports = toDoRouter;
