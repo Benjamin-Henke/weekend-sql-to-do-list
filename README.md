@@ -62,6 +62,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] POST - feature/POST
 [] PUT - feature/PUT
 [] DELETE - feature/DELETE
+    [] need to register del btn clicks after they have been appended
 
 ### Router
 [x] GET - feature/GET

@@ -5,6 +5,7 @@ $(document).ready(() => {
 
 // Handles all btn clicks
 function clickHandlers() {
+    // Calls the add task btn
     $('#addTaskBtn').on('click', () => {
         console.log('addTaskBtn');
         // Grab user inputs
@@ -17,6 +18,9 @@ function clickHandlers() {
         // Function below will send user input for POST
         postTask(taskToSend)
     }); // end #addTaskBtn function
+
+    // Calls the del btn
+    $('#viewTask').on('click', '.delBtn', deleteTask);
 } // end clickHandlers
 
 
@@ -48,6 +52,12 @@ function postTask(newTask) {
     })
 } // end postTasks
 
+
+function deleteTask() {
+    console.log('deleteTask', $(this));
+    
+} // end deleteTask
+
 // Renders tasks to the DOM
 function renderTasks(response) {
     console.log('renderTasks');
@@ -58,11 +68,11 @@ function renderTasks(response) {
     // Loop through response
     for (const task of response) {
         renderElement.append(`
-            <tr>
+            <tr date-id=${response.id}>
                 <td> ${task.task} </td>
                 <td> ${task.completed} </td>
-                <td id="completeBtn"><button>Complete</button></td>
-                <td id="delBtn"><button>X</button></td>
+                <td class="completeBtn"><button>Complete</button></td>
+                <td class="delBtn"><button>X</button></td>
             </tr>
         `); // end append
     }; // end for loop
