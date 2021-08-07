@@ -8,7 +8,14 @@ $(document).ready(() => {
 function clickHandlers () {
     $('#addTaskBtn').on('click', () => {
         console.log('addTaskBtn');
-        
+        // Grab user inputs
+        let taskToSend = {
+            task: $('#taskIn').val(),
+        };
+        // Clear input field
+        $('#taskIn').val('');
+        console.log(taskToSend);
+        readyToSend (taskToSend)
     }); // end #addTaskBtn function
 } // end clickHandlers
 
