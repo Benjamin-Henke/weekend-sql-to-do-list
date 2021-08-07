@@ -1,11 +1,10 @@
 $(document).ready(() => {
-    console.log('JS');
-    console.log('JQ');
+    getTasks();
     clickHandlers();
 }); // document start up
 
 // Handles all btn clicks
-function clickHandlers () {
+function clickHandlers() {
     $('#addTaskBtn').on('click', () => {
         console.log('addTaskBtn');
         // Grab user inputs
@@ -13,15 +12,31 @@ function clickHandlers () {
             task: $('#taskIn').val(),
         };
         // Clear input field
-        $('#taskIn').val('');
+        $('#taskIn').val('').focus();
         console.log(taskToSend);
-        readyToSend (taskToSend)
+        readyToSend(taskToSend)
     }); // end #addTaskBtn function
 } // end clickHandlers
 
 
 
 // Make request to server
-function getTasks () {
+function getTasks() {
+    console.log('getTasks');
 
+    $.ajax({
+        method: "GET",
+        url: "/tasks"
+    }).then((response) => {
+        console.log(response);
+        renderTasks(response);
+    }).catch((error) => {
+        console.log('GET Error', error);
+    })
 } // end getTasks
+
+
+// Renders tasks to the DOM
+function renderTasks() {
+    console.log('renderTasks');
+} // end renderTasks
