@@ -21,8 +21,10 @@ function clickHandlers() {
 
     // Calls the del btn
     $('#viewTask').on('click', '.delBtn', deleteTask);
-} // end clickHandlers
 
+    // Calls complete btn
+    $('#viewTask').on('click', '.completeBtn', putTask);
+} // end clickHandlers
 
 function getTasks() {
     console.log('getTasks');
@@ -51,6 +53,20 @@ function postTask(newTask) {
     })
 } // end postTasks
 
+function putTask() {
+    let taskId = $(this).parents('tr').data('id')
+    console.log('putTask', 'id', taskId, $(this));
+
+    $.ajax({
+        method: 'PUT',
+        url: `/todo/${taskId}`
+    }).then((response)=> {
+        console.log(response);
+        getTasks();
+    }).catch((error)=> {
+        console.log('PUT Error', error);
+    })
+} // end putTask
 
 function deleteTask() {
     let taskId = $(this).parents('tr').data('id')
@@ -65,6 +81,7 @@ function deleteTask() {
         getTasks();
     }).catch((error)=> {
         console.log('DELETE Error', error);
+        alert('Delete Task Failed')
     })
 } // end deleteTask
 
@@ -81,7 +98,7 @@ function renderTasks(response) {
             <tr data-id=${task.id}>
                 <td> ${task.task} </td>
                 <td> ${task.completed} </td>
-                <td class="completeBtn"><button>Complete</button></td>
+                <td class="completeBtn"><button>&#10003</button></td>
                 <td class="delBtn"><button>X</button></td>
             </tr>
         `); // end append

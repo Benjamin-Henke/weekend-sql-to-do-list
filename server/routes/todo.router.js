@@ -43,6 +43,17 @@ toDoRouter.post('/', (req, res)=> {
     })
 }) // end toDoRouter.post
 
+toDoRouter.put('/:id', (req, res)=> {
+    let sqlQuery = `UPDATE "tasks" SET "completed" = NOT "completed" WHERE "id" = $1`;
+    let sqlParams = [req.params.id];    // $1 -> this is the id
+    pool.query(sqlQuery, sqlParams).then((dbRes)=> {
+        res.sendStatus(201); // Created
+    }).catch((error)=> {
+        console.log('PUT Error', error);
+        res.sendStatus(500); // Send server error
+    })
+}) // end toDoRouter.put
+
 // Receive DELETE request from client
 // Delete data from database
 toDoRouter.delete('/:id', (req, res)=> {

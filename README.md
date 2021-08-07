@@ -60,13 +60,16 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] GET - feature/GET
     [x] render tasks to DOM
 [x] POST - feature/POST
-[] PUT - feature/PUT
+[x] PUT - feature/PUT
+    [x] need to register complete btn clicks after they have been appended
 [x] DELETE - feature/DELETE
     [x] need to register del btn clicks after they have been appended
 
 ### Router
 [x] GET - feature/GET
 [x] POST - feature/POSt
-[] PUT - feature/PUT
+[x] PUT - feature/PUT
+    [x] update boolean in database
+    [x] updates DOM from false to true and vis versa if user desires
 [x] DELETE - feature/DELETE
     [x] delete item and renders the DOM with correct tasks
