@@ -52,7 +52,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] create db table *tasks*
     [x] columns: task, completed[boolean]
 [x] copy sql code in database.sql
-[] link db
+[x] link db
 
 ### Client
 
