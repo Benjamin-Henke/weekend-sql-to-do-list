@@ -61,10 +61,12 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] render tasks to DOM
 [x] POST - feature/POST
 [] PUT - feature/PUT
-[] DELETE - feature/DELETE
+[x] DELETE - feature/DELETE
+    [x] need to register del btn clicks after they have been appended
 
 ### Router
 [x] GET - feature/GET
 [x] POST - feature/POSt
 [] PUT - feature/PUT
-[] DELETE - feature/DELETE
+[x] DELETE - feature/DELETE
+    [x] delete item and renders the DOM with correct tasks

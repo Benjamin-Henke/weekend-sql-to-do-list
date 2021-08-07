@@ -5,6 +5,7 @@ $(document).ready(() => {
 
 // Handles all btn clicks
 function clickHandlers() {
+    // Calls the add task btn
     $('#addTaskBtn').on('click', () => {
         console.log('addTaskBtn');
         // Grab user inputs
@@ -17,10 +18,12 @@ function clickHandlers() {
         // Function below will send user input for POST
         postTask(taskToSend)
     }); // end #addTaskBtn function
+
+    // Calls the del btn
+    $('#viewTask').on('click', '.delBtn', deleteTask);
 } // end clickHandlers
 
 
-// Make request to server
 function getTasks() {
     console.log('getTasks');
     $.ajax({
@@ -48,6 +51,23 @@ function postTask(newTask) {
     })
 } // end postTasks
 
+
+function deleteTask() {
+    let taskId = $(this).parents('tr').data('id')
+    console.log('deleteTask', 'id', taskId, $(this));
+    
+    $.ajax({
+        method: 'DELETE',
+        url: `/todo/${taskId}`,
+    }).then((response)=> {
+        console.log(response);
+        // Get updated database
+        getTasks();
+    }).catch((error)=> {
+        console.log('DELETE Error', error);
+    })
+} // end deleteTask
+
 // Renders tasks to the DOM
 function renderTasks(response) {
     console.log('renderTasks');
@@ -58,11 +78,11 @@ function renderTasks(response) {
     // Loop through response
     for (const task of response) {
         renderElement.append(`
-            <tr>
+            <tr data-id=${task.id}>
                 <td> ${task.task} </td>
                 <td> ${task.completed} </td>
-                <td id="completeBtn"><button>Complete</button></td>
-                <td id="delBtn"><button>X</button></td>
+                <td class="completeBtn"><button>Complete</button></td>
+                <td class="delBtn"><button>X</button></td>
             </tr>
         `); // end append
     }; // end for loop
