@@ -55,9 +55,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] link db
 
 ### Client - git branch feature/client
-[] *Add Task* btn click handler
-    [] grabs user inputs 
-[] GET
+[x] *Add Task* btn click handler
+    [x] grabs user inputs 
+[x] GET
 [] POST
 [] PUT
 [] DELETE
