@@ -14,10 +14,10 @@ function clickHandlers() {
         // Clear input field
         $('#taskIn').val('').focus();
         console.log(taskToSend);
-        readyToSend(taskToSend)
+        // Function below will send user input for POST
+            // saveTask(taskToSend)
     }); // end #addTaskBtn function
 } // end clickHandlers
-
 
 
 // Make request to server
