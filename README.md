@@ -33,6 +33,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] npm install express
 [x] npm install -body-parser
 [x] npm install pg
+[x] npm install sweetalert --save
 
 [x] package.json "start": "node server/server.js"
 
@@ -40,12 +41,29 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 
 ### Interface - git branch feature/interface
+[x] create *Task* input fields
+[x] create *Add Task* btn
+[x] create table with current tasks
+    [] tasks should have *Complete* and *Delete* btn when appended
 
+### Database - git branch feature/db
+[x] create sql file
+[x] create db *tasks*
+[x] create db table *tasks*
+    [x] columns: task, completed[boolean]
+[x] copy sql code in database.sql
+[x] link db
 
-### Database - git branch feature/database
+### Client - git branch feature/client
+[x] *Add Task* btn click handler
+    [x] grabs user inputs 
+[x] GET
+[] POST
+[] PUT
+[] DELETE
 
-
-### Client
-
-
-### Server/Router
+### Router - git branch feature/router
+[] GET
+[] POST
+[] PUT
+[] DELETE
