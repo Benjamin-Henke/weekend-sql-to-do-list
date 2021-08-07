@@ -46,8 +46,13 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] Create table with current tasks
     [] Tasks should have *Complete* and *Delete* btn when appended
 
-### Database - git branch feature/database
-
+### Database - git branch feature/db
+[x] create sql file
+[x] create db *tasks*
+[x] create db table *tasks*
+    [x] columns: task, completed[boolean]
+[x] copy sql code in database.sql
+[] link db
 
 ### Client
 
