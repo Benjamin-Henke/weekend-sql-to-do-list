@@ -96,7 +96,7 @@ function renderTasks(response) {
     for (const task of response) {
         renderElement.append(`
             <tr data-id=${task.id}>
-                <td> ${task.task} </td>
+                <td class="taskText"> ${task.task} </td>
                 <td> ${task.completed} </td>
                 <td class="completeBtn"><button>&#10003</button></td>
                 <td class="delBtn"><button>X</button></td>
@@ -105,7 +105,7 @@ function renderTasks(response) {
         // Unsure on how to target elements that we add to the DOM
         let completed = `<td> ${task.completed} </td>`;
         if (completed === true) {
-            completed.classList.add(".completed")
+            `<tr data-id=${task.id}></tr>`.classList.add(".completed")
         }   
     }; // end for loop
 } // end renderTasks

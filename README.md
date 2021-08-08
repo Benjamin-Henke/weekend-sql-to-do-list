@@ -76,4 +76,6 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ### Styling
 [] when complete button is pressed, change color of task (or something like that)
-[] maybe make it look like a notebook?
+[x] change font
+[x] change alignment
+[x] change background color
