@@ -73,3 +73,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] updates DOM from false to true and vis versa if user desires
 [x] DELETE - feature/DELETE
     [x] delete item and renders the DOM with correct tasks
+
+### Styling
+[] when complete button is pressed, change color of task (or something like that)
+[] maybe make it look like a notebook?

@@ -102,5 +102,11 @@ function renderTasks(response) {
                 <td class="delBtn"><button>X</button></td>
             </tr>
         `); // end append
+        // Unsure on how to target elements that we add to the DOM
+        let completed = `<td> ${task.completed} </td>`;
+        if (completed === true) {
+            completed.classList.add(".completed")
+        }   
     }; // end for loop
 } // end renderTasks
+
