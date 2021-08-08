@@ -1,5 +1,51 @@
 body {
     background-color: #faebd7;
     font-family: fantasy;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
 }
 
+
+td {
+    padding-top: 13px;
+    padding-bottom: 13px
+}
+
+h1 {
+    text-align: center;
+}
+
+.theader {
+    padding-top: 40px;
+    padding-bottom: 8px;
+    padding-right: 20px;
+    font-weight: bolder;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+
+
+.completed {
+    background-color: gray;
+}
+
+
+
+#tasks {
+    width: 50%;
+}
+
+
+#taskIn {
+    width: 65%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 5px;
+}
