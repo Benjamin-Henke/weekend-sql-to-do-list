@@ -11,4 +11,7 @@ VALUES
 	('Wash the car', false),
 	('Dust livingroom', false);
 	
-SELECT * FROM "tasks";
+SELECT * FROM "tasks" ORDER BY "completed", "id" LIMIT 100;
+
+-- LIMITS are very important and need to be added
+-- Especially with production databases, can slowdown the processes

@@ -43,6 +43,8 @@ toDoRouter.post('/', (req, res)=> {
     })
 }) // end toDoRouter.post
 
+// Receive PUT request from client
+// Update data from database
 toDoRouter.put('/:id', (req, res)=> {
     let sqlQuery = `UPDATE "tasks" SET "completed" = NOT "completed" WHERE "id" = $1`;
     let sqlParams = [req.params.id];    // $1 -> this is the id

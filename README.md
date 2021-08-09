@@ -6,6 +6,8 @@
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
+This web app is designed for users to create a To Do List for everyday tasks. 
+
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 

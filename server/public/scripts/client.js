@@ -26,6 +26,7 @@ function clickHandlers() {
     $('#viewTask').on('click', '.completeBtn', putTask);
 } // end clickHandlers
 
+// Request data from server
 function getTasks() {
     console.log('getTasks');
     $.ajax({
@@ -94,6 +95,7 @@ function renderTasks(response) {
     renderElement.empty();
     // Loop through response
     for (const task of response) {
+        console.log(task);
         renderElement.append(`
             <tr data-id=${task.id}>
                 <td class="taskText"> ${task.task} </td>
